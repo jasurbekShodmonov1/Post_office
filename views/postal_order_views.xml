@@ -1,0 +1,47 @@
+<odoo>
+    <record id="view_postal_order_form" model="ir.ui.view">
+        <field name="name">postal.order.form</field>
+        <field name="model">postal.order</field>
+        <field name="arch" type="xml">
+            <form string="Postal Order">
+                <sheet>
+                    <group>
+                        <field name="invoice_id"/>
+                        <field name="weight"/>
+                        <field name="volume"/>
+                        <field name="price" readonly="1"/>
+                        <field name="state"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_postal_order_tree" model="ir.ui.view">
+        <field name="name">postal.order.tree</field>
+        <field name="model">postal.order</field>
+        <field name="arch" type="xml">
+            <tree string="Postal Orders">
+                <field name="invoice_id"/>
+                <field name="weight"/>
+                <field name="volume"/>
+                <field name="price"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_delivery_process_form" model="ir.ui.view">
+        <field name="name">delivery.process.form</field>
+        <field name="model">delivery.process</field>
+        <field name="arch" type="xml">
+            <form string="Delivery Process">
+                <sheet>
+                    <group>
+                        <field name="order_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

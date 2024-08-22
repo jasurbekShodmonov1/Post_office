@@ -1,0 +1,21 @@
+<odoo>
+    <menuitem id="menu_postal_root" name="Postal Service" sequence="10"/>
+
+    <menuitem id="menu_postal_order" name="Orders" parent="menu_postal_root" sequence="10"/>
+    <menuitem id="menu_delivery_process" name="Delivery Process" parent="menu_postal_root" sequence="20"/>
+
+    <record id="action_postal_order" model="ir.actions.act_window">
+        <field name="name">Postal Orders</field>
+        <field name="res_model">postal.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_delivery_process" model="ir.actions.act_window">
+        <field name="name">Delivery Process</field>
+        <field name="res_model">delivery.process</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="menu_postal_order_action" parent="menu_postal_order" action="action_postal_order" sequence="10"/>
+    <menuitem id="menu_delivery_process_action" parent="menu_delivery_process" action="action_delivery_process" sequence="20"/>
+</odoo>

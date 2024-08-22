@@ -1,0 +1,8 @@
+<odoo>
+    <template id="website_postal_status_form" name="Postal Status Check">
+        <form action="/postal/status" method="post">
+            <input type="text" name="invoice_id" placeholder="Invoice ID"/>
+            <button type="submit">Check Status</button>
+        </form>
+    </template>
+</odoo>
